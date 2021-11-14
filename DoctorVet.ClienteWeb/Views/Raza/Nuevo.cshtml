@@ -1,0 +1,30 @@
+﻿@model Raza
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<h2>Nueva Raza</h2>
+<hr />
+
+<form method="post" action="@Url.Action("Nuevo","Raza")">
+    @*<div class="form-group">
+        <label>IdRaza</label>
+        @Html.TextBoxFor(x => x.idRaza, new { @class = "form-control" })
+    </div>*@
+    <div class="form-group">
+        <label>Nombre</label>
+        @Html.TextBoxFor(x => x.nombre, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Características</label>
+        @Html.TextBoxFor(x => x.caracteristicas, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Tipo mascota</label>
+        @Html.TextBoxFor(x => x.tipoMascota, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-success" value="Enviar"/>
+        <a href="@Url.Action("Index","Raza")">Regresar</a>
+    </div>
+</form>

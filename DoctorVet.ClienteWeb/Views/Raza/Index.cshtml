@@ -1,0 +1,32 @@
+﻿@model List<Raza>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2><a href="@Url.Action("Nuevo","Raza")" class="btn btn-primary right">Nuevo</a>
+    CRUD de Razas</h2>
+<hr/>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>nombre</td>
+            <td>Acciones</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var raza in Model){
+        <tr>
+            <td>@raza.idRaza</td>
+            <td>@raza.nombre</td>
+            <td>
+                <a href="@Url.Action("Actualizar","Raza", new { id = raza.idRaza})" class="btn btn-success right">Actualizar</a>
+                <a href="@Url.Action("Eliminar","Raza", new { id = raza.idRaza})" class="btn btn-danger right">Eliminar</a>
+                <a href="@Url.Action("Detalle","Raza", new { id = raza.idRaza})" class="btn btn-default right">Ver detalle</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,28 @@
+﻿@model Raza
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<h2>Detalle Raza</h2>
+<hr />
+
+<div class="form-group">
+    <label>IdRaza</label>
+    @Model.idRaza
+</div>
+<div class="form-group">
+    <label>Nombre</label>
+    @Model.nombre
+</div>
+<div class="form-group">
+    <label>Características</label>
+    @Model.caracteristicas
+</div>
+<div class="form-group">
+    <label>Tipo mascota</label>
+    @Model.tipoMascota
+</div>
+<div class="form-group">
+    <a href="@Url.Action("Index","Raza")">Regresar</a>
+</div>
+
